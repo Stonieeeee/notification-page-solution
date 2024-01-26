@@ -57,8 +57,8 @@ Users should be able to:
 
 ### Links
 
-- <a href="http://" target="_blank">Solution URL</a>
-- <a href="http://" target="_blank">Live Site URL</a>
+- <a href="https://www.frontendmentor.io/solutions/notification-page-solution-3c3i10fq4b" target="_blank">Solution URL</a>
+- <a href="https://stonieeeee.github.io/notification-page-solution/" target="_blank">Live Site URL</a>
 
 ## My process
 
