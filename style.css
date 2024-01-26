@@ -1,0 +1,228 @@
+:root {
+    --primary-color-red: hsl(1, 90%, 64%);
+    --primary-color-blue: hsl(219, 85%, 26%);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-grayish-blue-100: hsl(210, 60%, 98%);
+    --neutral-grayish-blue-200: hsl(211, 68%, 94%);
+    --neutral-grayish-blue-300: hsl(205, 33%, 90%);
+    --neutral-grayish-blue-400: hsl(219, 14%, 63%);
+    --neutral-grayish-blue-500: hsl(219, 12%, 42%);
+    --neutral-dark-blue: hsl(224, 21%, 14%);
+
+    --fs-paragraph: 1rem;
+
+    --ff-original: 'Plus Jakarta Sans', sans-serif;
+
+    --fw-medium: 500;
+    --fw-extrabold: 800;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    padding: 1rem;
+    font-family: var(--ff-original);
+    background-color: var(--neutral-grayish-blue-100);
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .notif-page {
+    padding: 3rem;
+    margin: 2rem auto;
+    width: 41%;
+    background-color: var(--neutral-white);
+    border-radius: 1.5rem;
+    box-shadow: 5px 7px 24px -2px rgba(0,0,0,0.35);
+    -webkit-box-shadow: 5px 7px 24px -2px rgba(0,0,0,0.35);
+    -moz-box-shadow: 5px 7px 24px -2px rgba(0,0,0,0.35);
+  }
+
+  img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .name {
+    font-weight: var(--fw-extrabold);
+  }
+
+  .name:hover {
+    cursor: pointer;
+    color: var(--primary-color-blue);
+  }
+
+  .dot {
+    margin-left: 8px;
+    margin-bottom: 2px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-color-red);
+    display: inline-block;
+  }
+
+  .chess {
+    font-weight: var(--fw-extrabold);
+    color: var(--neutral-grayish-blue-500);
+  }
+
+  .flex-containter-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: baseline;
+  }
+
+  .flex-containter-top h3{
+    font-weight: var(--fw-extrabold);
+    font-size: 1.4rem;
+  }
+
+  .flex-containter-top h3 span{
+    padding: 2px 11px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--neutral-white);
+    background-color: var(--primary-color-blue);
+    margin-left: 7px;
+  }
+
+  .flex-containter-top h4{
+    color: var(--neutral-grayish-blue-500);
+    font-weight: var(--fw-medium);
+  }
+
+  .flex-containter-top h4:hover {
+    cursor: pointer;
+    color: var(--primary-color-blue);
+  }
+
+  .grid-container {
+    display: grid;
+    gap: 10px;
+    line-height: 20px;
+  }
+
+  .grid-container .unread {
+    background-color: var(--neutral-grayish-blue-100);
+  }
+
+  .container {
+    display: grid;
+    border-radius: 10px;
+    padding: 1rem;
+    grid-template: repeat(1, auto) / repeat(2, auto);
+    gap: 1rem;
+  }
+
+  .container .time{
+    display: block;
+    color: var(--neutral-grayish-blue-400);
+  }
+
+  .container .post{
+    color: var(--neutral-grayish-blue-500);
+    font-weight: var(--fw-extrabold);
+  }
+
+  .container .post:hover,
+  .container .chess:hover {
+    cursor: pointer;
+    color: var(--primary-color-blue);
+  }
+
+  .chess-img:hover {
+    cursor: pointer;
+  }
+
+  .container:nth-child(2){
+    grid-template-columns: 48px auto;
+  }
+
+  .container:nth-child(7){
+    grid-template-columns: 48px auto;
+  }
+
+  .container:nth-child(4) .prvt-msg{
+    grid-column-start: 2;
+    padding: 15px;
+    border: 1px solid var(--neutral-grayish-blue-200);
+    color: var(--neutral-grayish-blue-500);
+    border-radius: 5px;
+  }
+
+  .prvt-msg:hover {
+    cursor: pointer;
+    background-color: var(--neutral-grayish-blue-200);
+  }
+
+  .container:nth-child(5) .chess-img{
+    grid-column-start: 3;
+  }
+
+  .grid-container .read {
+    background-color: var(--neutral-white);
+  }
+
+  @media (max-width: 1180px) {
+    body {
+      padding: 0;
+    }
+    .notif-page {
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 715px) {
+    .notif-page {
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+    }
+  }
+
+  @media (min-width: 420px) {
+    .container:nth-child(1){
+      grid-template-columns: 48px auto;
+    }
+
+    .container:nth-child(3){
+      grid-template-columns: 48px auto;
+    }
+
+    .container:nth-child(4){
+      grid-template-columns: 48px auto;
+    }
+
+    .container:nth-child(5){
+      grid-template-columns: 48px auto 48px;
+    }
+
+    .container:nth-child(6){
+      grid-template-columns: 48px auto;
+    }
+  }
